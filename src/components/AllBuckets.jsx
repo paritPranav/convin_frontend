@@ -18,7 +18,7 @@ export default function AllBuckets() {
   };
   const deleteAPI = (bucket) => {
     axios
-      .delete("http://localhost:3000/deleteBucket/" + bucket._id)
+      .delete("https://backend.convin.paritpranav.me/deleteBucket/" + bucket._id)
       .then((res) => {
         console.log(res);
       });
@@ -48,7 +48,7 @@ export default function AllBuckets() {
   }, [selectbucket, unselectbucket]);
 
   const fetchbuckets = () => {
-    axios.get("http://localhost:3000/allBuckets").then((res) => {
+    axios.get("https://backend.convin.paritpranav.me/allBuckets").then((res) => {
       setAllBuckets(res.data);
     });
   };

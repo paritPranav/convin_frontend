@@ -14,7 +14,7 @@ export default function CreateCard() {
   const createcard=async()=>{
     console.log("criating card")
     
-   await axios.post("http://localhost:3000/createCard",{
+   await axios.post("https://backend.convin.paritpranav.me/createCard",{
      
       name:cardname,
       link:link,

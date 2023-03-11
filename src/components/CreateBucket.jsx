@@ -9,7 +9,7 @@ export default function CreateBucket() {
   const oncreateBucket=()=>{
   
 
-      axios.post("http://localhost:3000/createBucket",{
+      axios.post("https://backend.convin.paritpranav.me/createBucket",{
         bucketname:bucketname
       }).then((res)=>{
         

@@ -17,7 +17,7 @@ export default function AllCards() {
 
   const move = (card, bucketname) => {
     console.log(bucketname);
-    axios.patch("http://localhost:3000/moveToOtherBucket", {
+    axios.patch("https://backend.convin.paritpranav.me/moveToOtherBucket", {
       id: card._id,
       bucketname: bucketname,
     });
@@ -37,14 +37,14 @@ export default function AllCards() {
   };
 
   const fetchbuckets = () => {
-    axios.get("http://localhost:3000/allBuckets").then((res) => {
+    axios.get("https://backend.convin.paritpranav.me/allBuckets").then((res) => {
       setAllBuckets(res.data);
     });
   };
 
   const deletecardAPI = (card_id) => {
     // console.log(cards);
-    axios.delete("http://localhost:3000/Deletecard/" + card_id).then((res) => {
+    axios.delete("https://backend.convin.paritpranav.me/Deletecard/" + card_id).then((res) => {
       console.log(res);
     });
   };
@@ -84,7 +84,7 @@ export default function AllCards() {
   // },[selectedCards]);
 
   const fetchcards = () => {
-    axios.get("http://localhost:3000/" + bucket + "/cards").then((res) => {
+    axios.get("https://backend.convin.paritpranav.me/" + bucket + "/cards").then((res) => {
       setcards(res.data);
     });
   };
