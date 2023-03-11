@@ -201,7 +201,8 @@ export default function AllCards() {
           </>
         )}
       </div>
-      <div className="row  ">
+      {
+        cards.length?<><div className="row  ">
         {cards.map((card) => {
           return (
             <div className="col-lg-2 col-md-3 col-sm-4 col-xs-6 ">
@@ -214,7 +215,12 @@ export default function AllCards() {
             </div>
           );
         })}
-      </div>
+      </div></>:<>
+      <img src={require('./card.png')}  style={{width:"10%",marginTop:"10%"}} class="card-img-top" alt="..."/>
+      <h1>EMPTY BUCKET</h1>
+      </>
+      }
+      
     </div>
   );
 }

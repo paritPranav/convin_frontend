@@ -130,7 +130,8 @@ export default function AllBuckets() {
         )}
 
       </div>
-      <div className="row  ">
+      {
+        AllBuckets.length?<><div className="row  ">
         {AllBuckets.map((bucket) => {
           return (
             <div className="col-lg-3 col-md-4 col-sm-6 ">
@@ -143,7 +144,10 @@ export default function AllBuckets() {
             </div>
           );
         })}
-      </div>
+      </div></>:<><img src={require('./bucket.png')}  style={{width:"10%",marginTop:"10%"}} class="card-img-top" alt="..."/>
+      <h1>NO BUCKETS</h1></>
+      }
+      
     </div>
   );
 }

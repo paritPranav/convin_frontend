@@ -22,7 +22,7 @@ export default function CreateBucket() {
   }
   return (
     <div>
-        <IoMdArrowBack onClick={moveback} style={{position:"absolute",top:"100",left:"100"}}/>
+        <IoMdArrowBack onClick={moveback} className="backbutton" style={{position:"absolute",top:"100",left:"100"}}/>
        <div>
 
         <div>
