@@ -35,7 +35,7 @@ export default function CreateBucket() {
               </div>
              
               <div class="submit-button-wrapper">
-                  <Link to={"/buckets"}><button onClick={oncreateBucket} >Create card</button></Link>
+                  <Link to={"/"}><button onClick={oncreateBucket} >Create card</button></Link>
               </div>
             </form>
           </div>
