@@ -1,24 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
-
+import {Routes, Route, BrowserRouter as Router,Switch,Link, useNavigate} from 'react-router-dom';
+import Navbar from './components/Navbar';
+import AllCards from './components/AllCards';
+import AllBucket from './components/AllBuckets';
+import CreateCard from './components/CreateCard';
+import CreateBucket from './components/CreateBucket';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <>
+      <Router>
+        <Navbar></Navbar>
+        <Routes>
+          <Route path='/buckets' element={<AllBucket/>}  ></Route>
+          <Route path='/:bucket/cards' element={<AllCards/>}></Route>
+          <Route path='/:bucket/createCard' element={<CreateCard/>}></Route>
+          <Route path='/createBucket' element={<CreateBucket/>}></Route>
+        </Routes>
+        
+      </Router>
+  </>
   );
 }
 

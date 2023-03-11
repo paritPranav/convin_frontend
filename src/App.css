@@ -1,38 +1,272 @@
-.App {
+*{
+  text-align: center;
+}
+.navbar .navbar-brand {
+  font-size: 30px;
+}
+.navbar .nav-item {
+  padding: 10px 20px;
+}
+.navbar .nav-link {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.navbar{
+  background-color: rgb(165, 212, 252);
+}
+.fa-bars {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.AllBucketMenu{
+  height: 100px;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+align-items: center;
+}
+.AllCardsMenu{
+  height: 100px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  align-items: center;
+}
+.allBuckets{
+  margin-top: 30px;
+}
+.card{
+  margin: 30px;
+  text-align: center;
+  border: none;
+}
+
+
+
+.card-form-wrapper {
+  padding: 200px 0;
+}
+
+.card-form {
+  padding: 30px 40px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  width: 500px;
+  height: 600px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding-top: 80px;
+  
+}
+
+
+.card-form .form-input,
+.form-text-area {
+  background-color: #f0f4f5;
+  height: 50px;
+  padding-left: 16px;
+}
+
+.card-form .form-text-area {
+  background-color: #f0f4f5;
+  height: auto;
+  padding-left: 16px;
+}
+
+.card-form .form-control::placeholder {
+  color: #7f7f7f;
+  font-weight: 500;
+  opacity: 1;
+}
+
+.card-form .form-control:-ms-input-placeholder {
+  color: #aeb4b9;
+  font-weight: 500;
+}
+
+.card-form .form-control::-ms-input-placeholder {
+  color: #aeb4b9;
+  font-weight: 500;
+}
+
+.card-form .form-control:focus {
+  border-color: #3f60f3;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.07), 0 0 8px #3f60f3;
+}
+
+.card-form .title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.card-form .description {
+  color: #aeb4b9;
+  font-size: 14px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-form .submit-button-wrapper {
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.card-form .submit-button-wrapper button {
+  border: none;
+  border-radius: 4px;
+  background-color: #57acfb;
   color: white;
+  text-transform: uppercase;
+  padding: 10px 60px;
+  font-weight: 500;
+  letter-spacing: 2px;
 }
 
-.App-link {
-  color: #61dafb;
+.card-form .submit-button-wrapper button:hover {
+  background-color: #3f60f3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Bucket Css */
+
+
+
+.bucket-form-wrapper {
+  padding: 200px 0;
+}
+
+.bucket-form {
+  padding: 30px 40px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  width: 500px;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding-top: 80px;
+  
+}
+
+
+.bucket-form .form-input,
+.form-text-area {
+  background-color: #f0f4f5;
+  height: 50px;
+  padding-left: 16px;
+}
+
+.bucket-form .form-text-area {
+  background-color: #f0f4f5;
+  height: auto;
+  padding-left: 16px;
+}
+
+.bucket-form .form-control::placeholder {
+  color: #7f7f7f;
+  font-weight: 500;
+  opacity: 1;
+}
+
+.bucket-form .form-control:-ms-input-placeholder {
+  color: #aeb4b9;
+  font-weight: 500;
+}
+
+.bucket-form .form-control::-ms-input-placeholder {
+  color: #aeb4b9;
+  font-weight: 500;
+}
+
+.bucket-form .form-control:focus {
+  border-color: #3f60f3;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.07), 0 0 8px #3f60f3;
+}
+
+.bucket-form .title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.bucket-form .description {
+  color: #aeb4b9;
+  font-size: 14px;
+  text-align: center;
+}
+
+.bucket-form .submit-button-wrapper {
+  text-align: center;
+}
+
+.bucket-form .submit-button-wrapper button {
+  border: none;
+  border-radius: 4px;
+  background-color: #57acfb;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px 60px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.bucket-form .submit-button-wrapper button:hover {
+  background-color: #3f60f3;
+}
+
+/* Modal */
+
+
+
+.popup-overlay {
+  background-color: rgba(60, 59, 59, 0.377);
+
+}
+.popup-content {
+  border-radius: 5px;
+  padding: 0.5rem;
+  background-color: rgb(247, 247, 247);
+  width: 90%;
+  margin-right: 5%;
+  margin-left: 5%;
+  height: 900px;
+  width: 1400px;
+}
+iframe{
+  width: 1300px;
+  margin-left: 50px;
+  height:850px;
+  margin-top: 25px;
+}
+html[data-theme='dark'] .popup-content {
+  background-color: rgb(41, 45, 62);
+  color: #fff;
+  border: 1px solid #9a9595;
+}
+
+html[data-theme='light'] .popup-content {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #d7d7d7;
+}
+
+html[data-theme='dark'] .popup-arrow > svg {
+  color: rgb(41, 45, 62);
+  stroke-width: 2px;
+  stroke: #9a9595;
+  stroke-dasharray: 30px;
+  stroke-dashoffset: -54px;
+}
+
+html[data-theme='light'] .popup-arrow > svg {
+  color: #fff;
+  stroke-width: 2px;
+  stroke: #d7d7d7;
+  stroke-dasharray: 30px;
+  stroke-dashoffset: -54px;
+}
+
+
+
+
+
+.close{
+  float: right;
+  border-radius: 20px;
+  font-size: 25px;
+  position: relative;
+  top: 0;
+ right:0;
 }
