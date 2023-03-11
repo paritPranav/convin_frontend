@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import SingleCard from "./SingleCard";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import {IoMdArrowBack} from 'react-icons/io';
 
 export default function AllCards() {
   const [isselect, setisselect] = useState(false);
@@ -15,6 +16,9 @@ export default function AllCards() {
   const navigate = useNavigate();
   let temp = [];
 
+    const onbackClick=()=>{
+        navigate(-1)
+    }
   const move = (card, bucketname) => {
     console.log(bucketname);
     axios.patch("https://backend.convin.paritpranav.me/moveToOtherBucket", {
@@ -118,8 +122,8 @@ export default function AllCards() {
        
         {!isselect ? (
           <>
-            <div className="col-2"><span style={{fontSize:"2rem"}}>{bucket}</span></div>
-            <div className="offset-6 col-2">
+            <div className="col-3"><IoMdArrowBack className="backbutton" onClick={onbackClick} style={{color:"black"}}/> <span style={{fontSize:"2rem"}}>{bucket}</span></div>
+            <div className="offset-5 col-2">
               <Link to={"/" + bucket + "/createCard"}>
                 <button className=" btn btn-primary ">+ ADD CARD</button>
               </Link>
@@ -146,7 +150,7 @@ export default function AllCards() {
             ) : (
               <>
                 {" "}
-                <div className="offset-6 col-2">
+                <div className="offset-5 col-2">
                   <button className=" btn btn-primary " onClick={deleteCards}>
                     Delete Cards
                   </button>

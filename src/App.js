@@ -12,7 +12,7 @@ function App() {
       <Router>
         <Navbar></Navbar>
         <Routes>
-          <Route path='/buckets' element={<AllBucket/>}  ></Route>
+          <Route path='/' element={<AllBucket/>}  ></Route>
           <Route path='/:bucket/cards' element={<AllCards/>}></Route>
           <Route path='/:bucket/createCard' element={<CreateCard/>}></Route>
           <Route path='/createBucket' element={<CreateBucket/>}></Route>

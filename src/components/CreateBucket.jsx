@@ -1,11 +1,15 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 import { useNavigate,Link } from 'react-router-dom';
+import {IoMdArrowBack} from 'react-icons/io';
 
 
 export default function CreateBucket() {
   const [bucketname,setbucketname]=useState();
   const navigate=useNavigate();
+  const moveback=()=>{
+    navigate(-1);
+  }
   const oncreateBucket=()=>{
   
 
@@ -18,8 +22,9 @@ export default function CreateBucket() {
   }
   return (
     <div>
+        <IoMdArrowBack onClick={moveback} style={{position:"absolute",top:"100",left:"100"}}/>
        <div>
-        
+
         <div>
           <div class="bucket-form-wrapper d-flex justify-content-center">
             <form action="#" class="bucket-form">

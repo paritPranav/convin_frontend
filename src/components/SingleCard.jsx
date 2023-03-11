@@ -51,7 +51,7 @@ const openmodal=()=>{
 
 <div class="card-body">
     {
-        props.select?    <input type="checkbox" onChange={(e)=>oncheckhandle(e)} value={checkvalue} ></input>:<></>
+        props.select?    <input type="checkbox" style={{width:"30px",height:"30px"}} onChange={(e)=>oncheckhandle(e)} value={checkvalue} ></input>:<></>
     }
 <h5 class="card-title">{props.card.Name}</h5>
 <button  className='btn btn-success' onClick={openmodal}>Open Media</button>
